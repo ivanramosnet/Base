@@ -1,0 +1,2 @@
+# Base
+Base Joomla Template
