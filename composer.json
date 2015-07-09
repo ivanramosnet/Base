@@ -1,0 +1,20 @@
+{
+    "name": "ivanramosnet/base",
+    "description": "Base Joomla Template",
+    "license": "GPLv2+",
+    "authors": [
+        {
+            "name": "Iván Ramos",
+            "email": "info@ivan.ramos.name"
+        }
+    ],
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/joomla/joomla-cms"
+        }
+    ],
+    "require-dev": {
+        "joomla/joomla-cms": "^3.4.3"
+    }
+}
