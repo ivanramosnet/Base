@@ -1,0 +1,9 @@
+{
+	"wwwDir"           : "/var/www/vendor/joomla/joomla-cms",
+	"browserSyncProxy" : "base.dev",
+	"extensions"       : {
+		"templates"  : {
+            "frontend"       : ["base"]
+        }
+	}
+}
