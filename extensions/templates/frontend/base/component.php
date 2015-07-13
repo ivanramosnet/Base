@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @package		Joomla.Site
+ * @subpackage	Templates.base
+ * @copyright	Copyright (C) 2015 Iván Ramos Jiménez. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * 
+ */
+
+defined('_JEXEC') or die;
+?>
+<!doctype html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<jdoc:include type="head" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.min.css">
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jui/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	</head>
+	<body class="contentpane">
+		<jdoc:include type="message" />
+		<jdoc:include type="component" />
+		<?php JHtml::_('bootstrap.framework'); ?>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/script.js"></script>
+	</body>
+</html>
