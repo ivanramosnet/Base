@@ -9,4 +9,4 @@
 
 defined('_JEXEC') or die;
 ?>
-icon-<?php echo $displayData['icon']; ?>
+glyphicon glyphicon-<?php echo $displayData['icon']; ?>

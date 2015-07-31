@@ -20,7 +20,7 @@ $button = $displayData;
 		$onclick  = ($button->get('onclick')) ? ' onclick="' . $button->get('onclick') . '"' : '';
 		$title    = ($button->get('title')) ? $button->get('title') : $button->get('text');
 	?>
-	<a class="<?php echo $class; ?>" title="<?php echo $title; ?>" <?php echo $href, $onclick; ?> rel="<?php echo $button->get('options'); ?>">
-		<span class="icon-<?php echo $button->get('name'); ?>"></span> <?php echo $button->get('text'); ?>
+	<a class="<?php echo $class; ?> btn-default" title="<?php echo $title; ?>" <?php echo $href, $onclick; ?> rel="<?php echo $button->get('options'); ?>">
+		<span class="glyphicon glyphicon-<?php echo $button->get('name'); ?>"></span> <?php echo $button->get('text'); ?>
 	</a>
 <?php endif;

@@ -17,23 +17,23 @@ switch ((string) $item->text)
 {
 	// Check for "Start" item
 	case JText::_('JLIB_HTML_START') :
-		$icon = "icon-backward";
+		$icon = "glyphicon glyphicon-fast-backward";
 		break;
 
 	// Check for "Prev" item
 	case $item->text == JText::_('JPREV') :
 		$item->text = JText::_('JPREVIOUS');
-		$icon = "icon-step-backward";
+		$icon = "glyphicon glyphicon-backward";
 		break;
 
 	// Check for "Next" item
 	case JText::_('JNEXT') :
-		$icon = "icon-step-forward";
+		$icon = "glyphicon glyphicon-forward";
 		break;
 
 	// Check for "End" item
 	case JText::_('JLIB_HTML_END') :
-		$icon = "icon-forward";
+		$icon = "glyphicon glyphicon-fast-forward";
 		break;
 
 	default:
@@ -43,7 +43,7 @@ switch ((string) $item->text)
 
 if ($icon !== null)
 {
-	$display = '<i class="' . $icon . '"></i>';
+	$display = '<span class="' . $icon . '"></span>';
 }
 
 if ($displayData['active'])

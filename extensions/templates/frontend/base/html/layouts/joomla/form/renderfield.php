@@ -27,9 +27,9 @@ $class = empty($displayData['options']['class']) ? "" : " " . $displayData['opti
 $rel   = empty($displayData['options']['rel']) ? "" : " " .  $displayData['options']['rel'];
 ?>
 
-<div class="control-group<?php echo $class; ?>"<?php echo $rel; ?>>
+<div class="form-group<?php echo $class; ?>"<?php echo $rel; ?>>
 	<?php if (empty($displayData['options']['hiddenLabel'])) : ?>
-		<div class="control-label"><?php echo $displayData['label']; ?></div>
+		<?php echo $displayData['label']; ?>
 	<?php endif; ?>
-	<div class="controls"><?php echo $displayData['input']; ?></div>
+	<?php echo str_replace('inputbox', 'inputbox form-control', $displayData['input']); ?>
 </div>

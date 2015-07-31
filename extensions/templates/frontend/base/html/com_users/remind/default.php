@@ -21,27 +21,20 @@ JHtml::_('behavior.formvalidator');
 	</div>
 	<?php endif; ?>
 
-	<form id="user-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=remind.remind'); ?>" method="post" class="form-validate form-horizontal well">
+	<form id="user-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=remind.remind'); ?>" method="post" class="form-validate">
 		<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
 		<fieldset>
 			<p><?php echo JText::_($fieldset->label); ?></p>
 			<?php foreach ($this->form->getFieldset($fieldset->name) as $name => $field) : ?>
-				<div class="control-group">
-					<div class="control-label">
-						<?php echo $field->label; ?>
-					</div>
-					<div class="controls">
-						<?php echo $field->input; ?>
-					</div>
+				<div class="form-group">
+					<?php echo $field->label; ?>
+					<?php $field->__set('class', $field->__get('class') . ' form-control'); ?>
+					<?php echo $field->input; ?>
 				</div>
 			<?php endforeach; ?>
 		</fieldset>
 		<?php endforeach; ?>
-		<div class="control-group">
-			<div class="controls">
-				<button type="submit" class="btn btn-primary validate"><?php echo JText::_('JSUBMIT'); ?></button>
-			</div>
-		</div>
+		<button type="submit" class="btn btn-primary validate"><?php echo JText::_('JSUBMIT'); ?></button>
 		<?php echo JHtml::_('form.token'); ?>
 	</form>
 </div>
