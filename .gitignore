@@ -2,4 +2,3 @@ vendor/
 node_modules/
 .sass-cache/
 .vagrant/
-html/
