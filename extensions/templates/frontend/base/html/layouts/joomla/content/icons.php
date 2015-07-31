@@ -20,7 +20,7 @@ $canEdit = $displayData['params']->get('access-edit');
 
 		<?php if ($canEdit || $displayData['params']->get('show_print_icon') || $displayData['params']->get('show_email_icon')) : ?>
 			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				<span class="caret"></span>
+				<span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>
 			</button>
 			<?php // Note the actions class is deprecated. Use dropdown-menu instead. ?>
 			<ul class="dropdown-menu">

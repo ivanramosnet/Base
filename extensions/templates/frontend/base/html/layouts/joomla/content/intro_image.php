@@ -17,12 +17,12 @@ $params  = $displayData->params;
 	<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 	<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($displayData->slug, $displayData->catid, $displayData->language)); ?>"><img
 	<?php if ($images->image_intro_caption):
-		echo 'class="caption"' . ' title="' . htmlspecialchars($images->image_intro_caption) . '"';
+		echo 'class="caption img-responsive"' . ' title="' . htmlspecialchars($images->image_intro_caption) . '"';
 	endif; ?>
 	src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>" class="img-responsive" itemprop="thumbnailUrl"/></a>
 	<?php else : ?><img
 	<?php if ($images->image_intro_caption):
-		echo 'class="caption"' . ' title="' . htmlspecialchars($images->image_intro_caption) . '"';
+		echo 'class="caption img-responsive"' . ' title="' . htmlspecialchars($images->image_intro_caption) . '"';
 	endif; ?>
 	src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>" class="img-responsive" itemprop="thumbnailUrl"/>
 	<?php endif; ?> 

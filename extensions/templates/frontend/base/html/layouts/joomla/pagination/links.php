@@ -58,7 +58,7 @@ if ($currentPage >= $step)
 	<?php endif; ?>
 
 	<?php if ($showPagesLinks && (!empty($pages))) : ?>
-		<ul class="pagination-list">
+		<ul class="pagination">
 			<?php
 				echo JLayoutHelper::render('joomla.pagination.link', $pages['start']);
 				echo JLayoutHelper::render('joomla.pagination.link', $pages['previous']); ?>

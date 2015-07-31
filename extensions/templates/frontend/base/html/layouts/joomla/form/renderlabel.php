@@ -29,13 +29,15 @@ $position	= $displayData['position'];
 
 $id = $for . '-lbl';
 $title = '';
+$dataToggle='';
 
 // If a description is specified, use it to build a tooltip.
 if (!empty($desc))
 {
 	JHtml::_('bootstrap.tooltip');
-	$classes[] = 'hasTooltip';
+	$classes[] = '';
 	$title = ' title="' . JHtml::tooltipText(trim($text, ':'), $desc, 0) . '"';
+	$dataToggle='data-toggle="tooltip"';
 }
 
 // If required, there's a class for that.
@@ -45,6 +47,6 @@ if ($req)
 }
 
 ?>
-<label id="<?php echo $id; ?>" for="<?php echo $for; ?>" class="<?php echo implode(' ', $classes); ?>"<?php echo $title; ?><?php echo $position; ?>>
+<label id="<?php echo $id; ?>" for="<?php echo $for; ?>" class="<?php echo implode(' ', $classes); ?>" <?php echo $dataToggle; ?> <?php echo $title; ?><?php echo $position; ?>>
 	<?php echo $text; ?><?php if ($req) : ?><span class="star">&#160;*</span><?php endif; ?>
 </label>

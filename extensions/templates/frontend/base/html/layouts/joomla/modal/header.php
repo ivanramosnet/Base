@@ -32,9 +32,9 @@ extract($displayData);
 ?>
 <div class="modal-header">
 	<?php if (!isset($params['closeButton']) || $params['closeButton']) : ?>
-		<button type="button" class="close" data-dismiss="modal">×</button>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	<?php endif; ?>
 	<?php if (isset($params['title'])) : ?>
-		<h3><?php echo $params['title']; ?></h3>
+		<h4><?php echo $params['title']; ?></h4>
 	<?php endif; ?>
 </div>

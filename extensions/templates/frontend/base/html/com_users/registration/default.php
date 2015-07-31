@@ -19,7 +19,7 @@ JHtml::_('behavior.formvalidator');
 		</div>
 	<?php endif; ?>
 
-	<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
+	<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate" enctype="multipart/form-data">
 		<?php foreach ($this->form->getFieldsets() as $fieldset): // Iterate through the form fieldsets and display each one.?>
 			<?php $fields = $this->form->getFieldset($fieldset->name);?>
 			<?php if (count($fields)):?>
@@ -31,30 +31,23 @@ JHtml::_('behavior.formvalidator');
 					<?php if ($field->hidden):// If the field is hidden, just display the input.?>
 						<?php echo $field->input;?>
 					<?php else:?>
-						<div class="control-group">
-							<div class="control-label">
+						<div class="form-group">
 							<?php echo $field->label; ?>
 							<?php if (!$field->required && $field->type != 'Spacer') : ?>
 								<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
 							<?php endif; ?>
-							</div>
-							<div class="controls">
-								<?php echo $field->input;?>
-							</div>
+							<?php $field->__set('class', $field->__get('class') . ' form-control'); ?>
+							<?php echo $field->input;?>
 						</div>
 					<?php endif;?>
 				<?php endforeach;?>
 				</fieldset>
 			<?php endif;?>
 		<?php endforeach;?>
-		<div class="control-group">
-			<div class="controls">
-				<button type="submit" class="btn btn-primary validate"><?php echo JText::_('JREGISTER');?></button>
-				<a class="btn" href="<?php echo JRoute::_('');?>" title="<?php echo JText::_('JCANCEL');?>"><?php echo JText::_('JCANCEL');?></a>
-				<input type="hidden" name="option" value="com_users" />
-				<input type="hidden" name="task" value="registration.register" />
-			</div>
-		</div>
+			<button type="submit" class="btn btn-primary validate"><?php echo JText::_('JREGISTER');?></button>
+			<a class="btn btn-default" href="<?php echo JRoute::_('');?>" title="<?php echo JText::_('JCANCEL');?>"><?php echo JText::_('JCANCEL');?></a>
+			<input type="hidden" name="option" value="com_users" />
+			<input type="hidden" name="task" value="registration.register" />
 		<?php echo JHtml::_('form.token');?>
 	</form>
 </div>
