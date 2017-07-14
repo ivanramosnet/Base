@@ -8,7 +8,7 @@
 	<authorUrl>http://ivan.ramos.name</authorUrl>
 	<copyright>Copyright (C) 2015 Iván Ramos Jiménez. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.0</version>
+	<version>1.1</version>
 	<description>TPL_BASE_XML_DESCRIPTION</description>
 	<files>
 		<folder>css</folder>
